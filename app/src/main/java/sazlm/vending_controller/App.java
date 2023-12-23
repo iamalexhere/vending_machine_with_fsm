@@ -5,7 +5,7 @@ package sazlm.vending_controller;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!";
+        return "Hello jancuk!";
     }
 
     public static void main(String[] args) {
