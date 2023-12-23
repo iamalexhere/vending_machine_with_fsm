@@ -38,22 +38,18 @@ public class Machine {
     public void selectQuantity(int quantity) {
         if (currentState == State.PRODUCT_SELECTION && inventory.isProductAvailable(selectedProduct, quantity)) {
             selectedQuantity = quantity;
-            currentState = State.QUANTITY_SELECTION;
+            currentState = State.PAYMENT_PENDING;
         } else {
             cancelTransaction();
         }
     }
 
     public void processPayment(int paymentAmount) {
-        //balance = balance + paymentAmount;
-        if (currentState == State.QUANTITY_SELECTION) {
+        balance = balance + paymentAmount;
+        if (currentState == State.PAYMENT_PENDING) {
             int totalPrice = selectedProduct.getPrice() * selectedQuantity;
-            if (paymentAmount >= totalPrice) {
-                totalPayment = paymentAmount;
-                currentState = State.PAYMENT_COMPLETE;
-            } else {
-                currentState = State.BALANCE_CHECK;
-            }
+            totalPayment = totalPrice;
+            currentState = State.BALANCE_CHECK;
         } else {
             cancelTransaction();
         }
@@ -64,6 +60,7 @@ public class Machine {
             inventory.updateStock(selectedProduct, selectedQuantity);
             System.out.println("Transaction complete. Product dispensed.");
             displayRemainingStock(selectedProduct);
+            displayBalance();
             resetTransaction();
             currentState = State.IDLE;
         } else {
@@ -73,9 +70,12 @@ public class Machine {
 
     public void checkBalance() {
         if (currentState == State.BALANCE_CHECK) {
-            System.out.println("Insufficient funds. Transaction canceled.");
-            resetTransaction();
-            currentState = State.IDLE;
+            if(balance < totalPayment){
+                currentState = State.PAYMENT_PENDING;
+            } else if(balance >= totalPayment){
+                balance = balance - totalPayment;
+                currentState = State.PAYMENT_COMPLETE;
+            }
         } else {
             cancelTransaction();
         }
@@ -112,6 +112,10 @@ public class Machine {
     private void displayRemainingStock(Product product) {
         int remainingStock = getRemainingStock(product);
         System.out.println("Remaining stock of " + product + ": " + remainingStock);
+    }
+    
+    private void displayBalance(){
+        System.out.println("Remaining balance: " + balance);
     }
 
 

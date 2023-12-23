@@ -11,9 +11,9 @@ package sazlm.vending_model;
 public enum State {
     IDLE,
     PRODUCT_SELECTION,
-    QUANTITY_SELECTION,
+    //QUANTITY_SELECTION,
     PAYMENT_PENDING,
     PAYMENT_COMPLETE,
     BALANCE_CHECK,
-        PRODUCT_SOLD_OUT;
+    //PRODUCT_SOLD_OUT;
 }
