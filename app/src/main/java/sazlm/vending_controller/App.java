@@ -3,12 +3,82 @@
  */
 package sazlm.vending_controller;
 
+import sazlm.vending_model.Machine;
+
+import java.util.Scanner;
+
 public class App {
-    public String getGreeting() {
-        return "Hello jancuk!";
+    public static void main(String[] args) {
+        Machine vendingMachine = new Machine();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the Vending Machine!");
+
+        while (true) {
+            displayMenu();
+
+            int choice = 0;
+            if (scanner.hasNextInt()) {
+                choice = scanner.nextInt();
+                scanner.nextLine(); // Consume the newline character
+            } else {
+                System.out.println("Invalid input. Please enter a number.");
+                scanner.nextLine(); // Consume the invalid input
+            }
+
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter the product name: ");
+                    String productName = scanner.nextLine();
+                    vendingMachine.selectProduct(productName.toUpperCase());
+                    break;
+                case 2:
+                    System.out.print("Enter the quantity: ");
+                    int quantity = scanner.nextInt();
+                    vendingMachine.selectQuantity(quantity);
+                    break;
+                case 3:
+                    System.out.print("Enter the payment amount: ");
+                    int paymentAmount = scanner.nextInt();
+                    vendingMachine.processPayment(paymentAmount);
+                    break;
+                case 4:
+                    vendingMachine.completeTransaction();
+                    break;
+                case 5:
+                    vendingMachine.checkBalance();
+                    break;
+                case 6:
+                    vendingMachine.cancelTransaction();
+                    break;
+                case 7:
+                    System.out.println("Exiting the Vending Machine. Goodbye!");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+
+            displayCurrentState(vendingMachine);
+        }
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+    private static void displayMenu() {
+        System.out.println("\nMenu:");
+        System.out.println("1. Select Product");
+        System.out.println("2. Select Quantity");
+        System.out.println("3. Process Payment");
+        System.out.println("4. Complete Transaction");
+        System.out.println("5. Check Balance");
+        System.out.println("6. Cancel Transaction");
+        System.out.println("7. Exit");
+        System.out.print("Enter your choice: ");
+    }
+
+    private static void displayCurrentState(Machine Machine) {
+        System.out.println("\nCurrent State: " + Machine.getCurrentState());
+        System.out.println("Selected Product: " + Machine.getSelectedProduct());
+        System.out.println("Selected Quantity: " + Machine.getSelectedQuantity());
     }
 }
