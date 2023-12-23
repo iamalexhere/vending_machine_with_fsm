@@ -4,43 +4,32 @@
 package sazlm.vending_controller;
 
 import sazlm.vending_model.Machine;
+import sazlm.vending_view.TerminalView;
 
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         Machine vendingMachine = new Machine();
-        Scanner scanner = new Scanner(System.in);
+        TerminalView view = new TerminalView();
 
         System.out.println("Welcome to the Vending Machine!");
 
         while (true) {
-            displayMenu();
-
-            int choice = 0;
-            if (scanner.hasNextInt()) {
-                choice = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline character
-            } else {
-                System.out.println("Invalid input. Please enter a number.");
-                scanner.nextLine(); // Consume the invalid input
-            }
-
+            view.displayMenu();
+            int choice = view.getChoiceInput();
+            view.consumeNewLine();
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter the product name: ");
-                    String productName = scanner.nextLine();
-                    vendingMachine.selectProduct(productName.toUpperCase());
+                    String productName = view.getProductNameInput();
+                    vendingMachine.selectProduct(productName);
                     break;
                 case 2:
-                    System.out.print("Enter the quantity: ");
-                    int quantity = scanner.nextInt();
+                    int quantity = view.getQuantityInput();
                     vendingMachine.selectQuantity(quantity);
                     break;
                 case 3:
-                    System.out.print("Enter the payment amount: ");
-                    int paymentAmount = scanner.nextInt();
+                    int paymentAmount = view.getPaymentAmountInput();
                     vendingMachine.processPayment(paymentAmount);
                     break;
                 case 4:
@@ -57,28 +46,17 @@ public class App {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    view.displayMessage("Invalid choice. Please try again.");
             }
 
-            displayCurrentState(vendingMachine);
+            view.displayCurrentState(
+                vendingMachine.getCurrentState().toString(),
+                vendingMachine.getSelectedProduct().toString(),
+                vendingMachine.getSelectedQuantity()
+            );
         }
-    }
-
-    private static void displayMenu() {
-        System.out.println("\nMenu:");
-        System.out.println("1. Select Product");
-        System.out.println("2. Select Quantity");
-        System.out.println("3. Process Payment");
-        System.out.println("4. Complete Transaction");
-        System.out.println("5. Check Balance");
-        System.out.println("6. Cancel Transaction");
-        System.out.println("7. Exit");
-        System.out.print("Enter your choice: ");
-    }
-
-    private static void displayCurrentState(Machine Machine) {
-        System.out.println("\nCurrent State: " + Machine.getCurrentState());
-        System.out.println("Selected Product: " + Machine.getSelectedProduct());
-        System.out.println("Selected Quantity: " + Machine.getSelectedQuantity());
-    }
+        }
 }
+
+
+
