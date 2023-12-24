@@ -15,15 +15,17 @@ public class Machine {
     private int selectedQuantity;
     private int balance;
     private int totalPayment;
+    private Payment payment;
 
     public Machine() {
         currentState = State.IDLE;
         inventory = new Inventory();
         selectedProduct = Product.NONE;
         selectedQuantity = 0;
-        totalPayment = 0;
-        balance = 0 ;
+        payment = new Payment(); // Initialize Payment object
     }
+
+
 
     public void selectProduct(String productName) {
         selectedProduct = Product.getProduct(productName);
@@ -44,17 +46,23 @@ public class Machine {
         }
     }
 
+    
     public void processPayment(int paymentAmount) {
         balance = balance + paymentAmount;
         if (currentState == State.PAYMENT_PENDING) {
             int totalPrice = selectedProduct.getPrice() * selectedQuantity;
             totalPayment = totalPrice;
+
+            // Update Payment object
+            payment.addPayment(paymentAmount);
+            payment.setTotalPayment(totalPayment);
+
             currentState = State.BALANCE_CHECK;
         } else {
             cancelTransaction();
         }
     }
-
+    
     public void completeTransaction() {
         if (currentState == State.PAYMENT_COMPLETE) {
             inventory.updateStock(selectedProduct, selectedQuantity);
@@ -70,10 +78,10 @@ public class Machine {
 
     public void checkBalance() {
         if (currentState == State.BALANCE_CHECK) {
-            if(balance < totalPayment){
+            if (!payment.isPaymentComplete()) {
                 currentState = State.PAYMENT_PENDING;
-            } else if(balance >= totalPayment){
-                balance = balance - totalPayment;
+            } else {
+                payment.completePayment();
                 currentState = State.PAYMENT_COMPLETE;
             }
         } else {
@@ -115,8 +123,14 @@ public class Machine {
     }
     
     private void displayBalance(){
-        System.out.println("Remaining balance: " + balance);
+        System.out.println("Remaining balance: " + getRemainingBalance());
+    }
+    
+    public int getRemainingBalance() {
+        return payment.getBalance();
     }
 
-
+    public int getTotalPayment() {
+        return payment.getTotalPayment();
+    }
 }
