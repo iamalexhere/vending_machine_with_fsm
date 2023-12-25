@@ -43,6 +43,7 @@ public class MainPayment extends javax.swing.JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(SwingUtilities.isLeftMouseButton(e)){
+                    machine.cancelTransaction();
                     SelectionProductFrame obj = new SelectionProductFrame(machine);
                     obj.setVisible(true);
                     dispose();
@@ -87,6 +88,8 @@ public class MainPayment extends javax.swing.JFrame {
         button20000 = new javax.swing.JButton();
         button50000 = new javax.swing.JButton();
         button100000 = new javax.swing.JButton();
+        confirmationPaymentPanel1 = new sazlm.vending_view.trial.payment_menu.ConfirmationPaymentPanel();
+        headBorder1 = new sazlm.vending_view.trial.payment_menu.HeadBorder();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -230,7 +233,7 @@ public class MainPayment extends javax.swing.JFrame {
                         .addGroup(confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(stockProdukLabel)
                             .addComponent(plus))))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, confirmationProductPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(hargaProduk)
@@ -400,6 +403,12 @@ public class MainPayment extends javax.swing.JFrame {
 
         jPanel4.add(CashPayment, "card2");
 
+        confirmationPaymentPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                confirmationPaymentPanel1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -410,15 +419,19 @@ public class MainPayment extends javax.swing.JFrame {
                 .addComponent(back)
                 .addGap(16, 16, 16))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(paymentMethodPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addComponent(confirmationProductPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(paymentMethodPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(confirmationProductPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(confirmationPaymentPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -434,7 +447,9 @@ public class MainPayment extends javax.swing.JFrame {
                 .addComponent(paymentMethodPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(confirmationPaymentPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(statePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -442,21 +457,17 @@ public class MainPayment extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 347, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(headBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 627, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(headBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -486,24 +497,6 @@ public class MainPayment extends javax.swing.JFrame {
         updatePrice();
     }//GEN-LAST:event_plusMousePressed
 
-    private void QRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QRMouseClicked
-        // TODO add your handling code here:
-        CashPayment.setVisible(false);
-        cd.show(jPanel4, "card3");
-        
-    }//GEN-LAST:event_QRMouseClicked
-
-    private void TunaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TunaiMouseClicked
-        // TODO add your handling code here:
-        cd.show(jPanel4, "card2");
-        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
-        minus.setEnabled(false);
-        plus.setEnabled(false);
-        stateLabel.setText(machine.getCurrentState().name());
-        
-        //saldoText.setText(machine);
-    }//GEN-LAST:event_TunaiMouseClicked
-
     private void button5000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5000ActionPerformed
         // TODO add your handling code here:
         if(machine.getCurrentState() == State.PAYMENT_PENDING){
@@ -529,8 +522,10 @@ public class MainPayment extends javax.swing.JFrame {
             machine.checkBalance();
             stateLabel.setText(machine.getCurrentState().name());
             if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                //this.conmfirmationPaymentPanel1.setCukup();
                 confirmationPaymentPanel1.setCukup();
             } else{
+                //this.conmfirmationPaymentPanel1.setKurang();
                 confirmationPaymentPanel1.setKurang();
             }
         }
@@ -597,6 +592,34 @@ public class MainPayment extends javax.swing.JFrame {
             this.dispose();            
         }
     }//GEN-LAST:event_confirmationPaymentPanel1MouseClicked
+
+    private void QRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QRMouseClicked
+        // TODO add your handling code here:
+        //machine.processPayment(machine.getTotalPayment(), "QRIS");
+        CashPayment.setVisible(false);
+        cd.show(jPanel4, "card3");
+        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
+        minus.setEnabled(false);
+        plus.setEnabled(false);
+        stateLabel.setText(machine.getCurrentState().name());
+        
+        machine.processPayment(machine.getTotalPayment(), "QRIS");
+        stateLabel.setText(machine.getCurrentState().name());
+        confirmationPaymentPanel1.setCukup();
+
+    }//GEN-LAST:event_QRMouseClicked
+
+    private void TunaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TunaiMouseClicked
+        // TODO add your handling code here:
+        cd.show(jPanel4, "card2");
+        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
+        minus.setEnabled(false);
+        plus.setEnabled(false);
+        stateLabel.setText(machine.getCurrentState().name());
+        
+
+        //saldoText.setText(machine);
+    }//GEN-LAST:event_TunaiMouseClicked
 
     public void updateLabel(){
         //this.stateLabel.setText(machine.getCurrentState().name());
@@ -678,8 +701,10 @@ public class MainPayment extends javax.swing.JFrame {
     private javax.swing.JButton button20000;
     private javax.swing.JButton button5000;
     private javax.swing.JButton button50000;
+    private sazlm.vending_view.trial.payment_menu.ConfirmationPaymentPanel confirmationPaymentPanel1;
     private javax.swing.JPanel confirmationProductPanel;
     private javax.swing.JLabel hargaProduk;
+    private sazlm.vending_view.trial.payment_menu.HeadBorder headBorder1;
     private javax.swing.JLabel iconProduct;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

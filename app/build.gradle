@@ -47,3 +47,15 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 */
+
+jar {
+  archiveFileName = 'AppJAR.jar'
+  manifest {
+    attributes 'Main-Class': 'sazlm.vending_controller.AppWIthGUITrial'
+  }
+  from {
+    configurations .compileClasspath.collect {
+    it.isDirectory() ? it : zipTree(it)
+  }
+}
+}

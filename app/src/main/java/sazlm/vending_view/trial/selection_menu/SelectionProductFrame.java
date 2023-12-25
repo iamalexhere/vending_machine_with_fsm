@@ -40,6 +40,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 if(SwingUtilities.isLeftMouseButton(e)){
+                    machine.cancelTransaction();
                     MainMenuFrame obj = new MainMenuFrame(machine);
                     obj.setVisible(true);
                     dispose();

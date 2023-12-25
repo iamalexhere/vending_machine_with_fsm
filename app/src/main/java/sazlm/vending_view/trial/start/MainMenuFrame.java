@@ -45,8 +45,14 @@ public class MainMenuFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(43, 60, 90));
+
+        stateLabel.setBackground(new java.awt.Color(255, 255, 255));
+        stateLabel.setForeground(new java.awt.Color(255, 255, 255));
         stateLabel.setText("STATE");
 
+        statePlaceholder.setBackground(new java.awt.Color(255, 255, 255));
+        statePlaceholder.setForeground(new java.awt.Color(255, 255, 255));
         statePlaceholder.setText("State:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

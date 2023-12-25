@@ -96,6 +96,10 @@ public class Machine {
         currentState = State.IDLE;
         System.out.println("Transaction canceled.");
     }
+    
+    public void resetState(){
+        currentState = State.IDLE;
+    }
 
     private void resetTransaction() {
         selectedProduct = Product.NONE;
