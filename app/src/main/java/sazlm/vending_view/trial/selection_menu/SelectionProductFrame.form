@@ -43,219 +43,145 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="maskerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="rokokLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lilinLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="permenLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="obatLabel" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="hargaLilinLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="hargaPowerbankLabel" min="-2" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                                  <Component id="hargaZippoLighterLabel" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="hargaPermenLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                                          <Component id="hargaMaskerLabel" min="-2" pref="16" max="-2" attributes="0"/>
-                                                          <Component id="hargaObatLabel" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <Component id="hargaRokokLabel" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="hargaZippoFluidLabel" min="-2" pref="19" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="hargaTravelCableLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="hargaFlashdiskLabel" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="zippoFluidLabel" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                                  <Component id="zippoLighterLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="flashdiskLabel" min="-2" max="-2" attributes="0"/>
-                                  <Component id="travelCableLabel" min="-2" pref="164" max="-2" attributes="0"/>
-                                  <Component id="powerbankLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="stockFlashdiskPlaceholder" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockZippoLighterPlaceholder" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockZippoFluidPlaceholder" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockLilinPlaceholder" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockMaskerPlaceholder" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockObatPlaceholder" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockPermenPlaceholder" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockRokokPlaceholder" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockTravelCablePlaceholder" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockPowerbankPlaceholder" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="stockPowerbankLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="stockZippoLighterLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockZippoFluidLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                              <Component id="stockMaskerLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                              <Component id="stockPermenLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                              <Component id="stockObatLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                              <Component id="stockLilinLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-                              <Component id="stockRokokLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="stockTravelCableLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockFlashdiskLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="90" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-          </Group>
           <Component id="statePanel" max="32767" attributes="0"/>
+          <Component id="jPanel1" max="32767" attributes="0"/>
+          <Component id="jPanel2" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="hargaPermenLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockPermenPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockPermenLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="permenLabel" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="stockMaskerPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockMaskerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="maskerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="hargaMaskerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="stockObatPlaceholder" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="stockObatLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="hargaObatLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="obatLabel" min="-2" pref="102" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lilinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="hargaLilinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="stockLilinPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="stockLilinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="rokokLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="hargaRokokLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockRokokPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockRokokLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="zippoFluidLabel" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
-                  <Component id="hargaZippoFluidLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockZippoFluidPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockZippoFluidLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="hargaZippoLighterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="zippoLighterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockZippoLighterPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockZippoLighterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="travelCableLabel" alignment="3" min="-2" pref="76" max="-2" attributes="0"/>
-                  <Component id="hargaTravelCableLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockTravelCablePlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockTravelCableLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="flashdiskLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="hargaFlashdiskLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockFlashdiskPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockFlashdiskLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="powerbankLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="hargaPowerbankLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockPowerbankPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="stockPowerbankLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-              </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="jPanel2" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="statePanel" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="5a" green="3c" red="2b" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                  <Component id="panelMoving" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="back" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <Component id="panelMoving" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="back" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="panelMoving">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="opaque" type="boolean" value="false"/>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="3"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/iconFolder/Screenshot 2023-12-23 104124-1.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Ben &amp; Lou"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="16" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Vending Machine Model"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JLabel" name="back">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="BACK"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
     <Container class="javax.swing.JPanel" name="statePanel">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="5a" green="3c" red="2b" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -285,275 +211,424 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="statePlaceholder">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="State:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="stateLabel">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="STATE"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="permenLabel">
+    <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/permen.png"/>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="permen"/>
       </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="permenLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="maskerLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/masker.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="masker"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="maskerLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaPermenLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="10"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaMaskerLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="20"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockMaskerPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock: "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockPermenPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock: "/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockPermenLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockMaskerLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="obatLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/obat.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="obat"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="obatLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaObatLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="20"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockObatPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockObatLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lilinLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/candle.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="lilin"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lilinLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaLilinLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="25"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockLilinPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockLilinLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="rokokLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/rokok.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="rokok"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rokokLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaRokokLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="30"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockRokokPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockRokokLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="zippoFluidLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/fluid.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="zippo fluid"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zippoFluidLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaZippoFluidLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="40"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockZippoFluidPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockZippoFluidLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="zippoLighterLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/lighter.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="zippo lighter"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zippoLighterLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaZippoLighterLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="70"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockZippoLighterPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockZippoLighterLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="travelCableLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/kabel.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="travel cable"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="travelCableLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaTravelCableLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="85"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockTravelCablePlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockTravelCableLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="flashdiskLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/flashdisk.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="flashdisk"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="flashdiskLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaFlashdiskLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="115"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockFlashdiskPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockFlashdiskLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="powerbankLabel">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/iconFolder/uiIcon/powerbank.png"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="powerbank"/>
-      </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="powerbankLabelMouseClicked"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="hargaPowerbankLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="180"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockPowerbankPlaceholder">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="stock:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="stockPowerbankLabel">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="(stock)"/>
-      </Properties>
-    </Component>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="maskerLabel" max="32767" attributes="0"/>
+                      <Component id="lilinLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="rokokLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="zippoLighterLabel" alignment="0" pref="233" max="32767" attributes="0"/>
+                      <Component id="flashdiskLabel" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
+                      <Component id="powerbankLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="travelCableLabel" alignment="1" max="32767" attributes="0"/>
+                      <Component id="zippoFluidLabel" alignment="0" max="32767" attributes="0"/>
+                      <Component id="obatLabel" alignment="1" max="32767" attributes="0"/>
+                      <Component id="permenLabel" alignment="1" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="stockFlashdiskPlaceholder" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockZippoLighterPlaceholder" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockZippoFluidPlaceholder" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockLilinPlaceholder" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockMaskerPlaceholder" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockRokokPlaceholder" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockTravelCablePlaceholder" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockPowerbankPlaceholder" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Component id="stockMaskerPlaceholder1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Component id="stockObatPlaceholder" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="stockPowerbankLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockZippoLighterLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockZippoFluidLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockTravelCableLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockFlashdiskLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockPermenLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockMaskerLabel" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="stockLilinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockRokokLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockObatLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="59" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="permenLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockPermenLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockMaskerPlaceholder1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="stockMaskerPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockMaskerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="maskerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="obatLabel" alignment="3" min="-2" pref="102" max="-2" attributes="0"/>
+                      <Component id="stockObatPlaceholder" alignment="3" min="-2" pref="16" max="-2" attributes="0"/>
+                      <Component id="stockObatLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="lilinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                          <Component id="stockLilinPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="stockLilinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="rokokLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockRokokPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockRokokLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="zippoFluidLabel" alignment="3" min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="stockZippoFluidPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockZippoFluidLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="zippoLighterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockZippoLighterPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockZippoLighterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="travelCableLabel" alignment="3" min="-2" pref="76" max="-2" attributes="0"/>
+                      <Component id="stockTravelCablePlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockTravelCableLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="flashdiskLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockFlashdiskPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockFlashdiskLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="powerbankLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="stockPowerbankPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="stockPowerbankLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="15" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="flashdiskLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/flashdisk.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Flashdisk Rp115.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="flashdiskLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockMaskerPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lilinLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/candle.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Lilin Rp25.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lilinLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockMaskerLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="rokokLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/rokok.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Rokok Rp30.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rokokLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="travelCableLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/kabel.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Travel Cable Rp85.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="travelCableLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockLilinLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockLilinPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockFlashdiskLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockObatLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockTravelCableLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockTravelCablePlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockFlashdiskPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="zippoFluidLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/fluid.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Zippo Fluid Rp40.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zippoFluidLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="maskerLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/masker.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Masker Rp 20.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="maskerLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockZippoFluidLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockPermenLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockRokokLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockPowerbankLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockRokokPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="obatLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/obat-1.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Obat Rp20.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="obatLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockZippoFluidPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockZippoLighterPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="powerbankLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/powerbank.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Powerbank Rp180.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="powerbankLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="zippoLighterLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/lighter.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Zippo Lighter Rp70.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zippoLighterLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockZippoLighterLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="(stock)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockObatPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockPowerbankPlaceholder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="permenLabel">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/iconFolder/uiIcon/permen.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Permen Rp 10.000"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="permenLabelMouseClicked"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="stockMaskerPlaceholder1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="stock: "/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </SubComponents>
 </Form>
