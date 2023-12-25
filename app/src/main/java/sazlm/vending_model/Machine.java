@@ -25,8 +25,6 @@ public class Machine {
         payment = new Payment(); // Initialize Payment object
     }
 
-
-
     public void selectProduct(String productName) {
         selectedProduct = Product.getProduct(productName);
 
@@ -133,4 +131,5 @@ public class Machine {
     public int getTotalPayment() {
         return payment.getTotalPayment();
     }
+    
 }
