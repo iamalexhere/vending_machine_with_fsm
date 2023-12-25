@@ -5,6 +5,7 @@
 package sazlm.vending_view.trial.payment_menu;
 
 import java.awt.CardLayout;
+import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.Icon;
@@ -389,7 +390,7 @@ public class MainPayment extends javax.swing.JFrame {
             .addGroup(CashPaymentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(0, 0, 0)
                 .addGroup(CashPaymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button5000)
                     .addComponent(button10000)
@@ -398,7 +399,7 @@ public class MainPayment extends javax.swing.JFrame {
                 .addGroup(CashPaymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(button50000)
                     .addComponent(button100000))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         jPanel4.add(CashPayment, "card2");
@@ -466,7 +467,7 @@ public class MainPayment extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(headBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -497,10 +498,54 @@ public class MainPayment extends javax.swing.JFrame {
         updatePrice();
     }//GEN-LAST:event_plusMousePressed
 
-    private void button5000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5000ActionPerformed
+    private void confirmationPaymentPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmationPaymentPanel1MouseClicked
+        // TODO add your handling code here:
+        if(confirmationPaymentPanel1.isAvailable){
+            machine.completeTransaction();
+            stateLabel.setText(machine.getCurrentState().name()); 
+            MainMenuFrame mainMenu = new MainMenuFrame(machine);
+            mainMenu.setVisible(true);
+            this.dispose();            
+        }
+    }//GEN-LAST:event_confirmationPaymentPanel1MouseClicked
+
+    private void QRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QRMouseClicked
+        // TODO add your handling code here:
+        //machine.processPayment(machine.getTotalPayment(), "QRIS");
+        CashPayment.setVisible(false);
+        cd.show(jPanel4, "card3");
+        QR.setForeground(Color.white);
+        Tunai.setForeground(Color.LIGHT_GRAY);
+        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
+        minus.setEnabled(false);
+        plus.setEnabled(false);
+        stateLabel.setText(machine.getCurrentState().name());
+        
+        machine.processPayment(machine.getTotalPayment(), "QRIS");
+        stateLabel.setText(machine.getCurrentState().name());
+        confirmationPaymentPanel1.setCukup();
+
+    }//GEN-LAST:event_QRMouseClicked
+
+    private void TunaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TunaiMouseClicked
+        // TODO add your handling code here:
+        cd.show(jPanel4, "card2");
+        Tunai.setForeground(Color.white);
+        QR.setForeground(Color.LIGHT_GRAY);
+        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
+        minus.setEnabled(false);
+        plus.setEnabled(false);
+        stateLabel.setText(machine.getCurrentState().name());
+        
+        
+
+        //saldoText.setText(machine);
+    }//GEN-LAST:event_TunaiMouseClicked
+
+    private void button100000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button100000ActionPerformed
         // TODO add your handling code here:
         if(machine.getCurrentState() == State.PAYMENT_PENDING){
-            machine.processPayment(5_000, "cash");
+            machine.processPayment(100_000, "cash");
             saldoText.setText(machine.getRemainingBalance()+"");
             stateLabel.setText(machine.getCurrentState().name());
             machine.checkBalance();
@@ -510,8 +555,40 @@ public class MainPayment extends javax.swing.JFrame {
             } else{
                 confirmationPaymentPanel1.setKurang();
             }
-        }         
-    }//GEN-LAST:event_button5000ActionPerformed
+        }
+    }//GEN-LAST:event_button100000ActionPerformed
+
+    private void button50000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button50000ActionPerformed
+        // TODO add your handling code here:
+        if(machine.getCurrentState() == State.PAYMENT_PENDING){
+            machine.processPayment(50_000, "cash");
+            saldoText.setText(machine.getRemainingBalance()+"");
+            stateLabel.setText(machine.getCurrentState().name());
+            machine.checkBalance();
+            stateLabel.setText(machine.getCurrentState().name());
+            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                confirmationPaymentPanel1.setCukup();
+            } else{
+                confirmationPaymentPanel1.setKurang();
+            }
+        }
+    }//GEN-LAST:event_button50000ActionPerformed
+
+    private void button20000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button20000ActionPerformed
+        // TODO add your handling code here:
+        if(machine.getCurrentState() == State.PAYMENT_PENDING){
+            machine.processPayment(20_000, "cash");
+            saldoText.setText(machine.getRemainingBalance()+"");
+            stateLabel.setText(machine.getCurrentState().name());
+            machine.checkBalance();
+            stateLabel.setText(machine.getCurrentState().name());
+            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                confirmationPaymentPanel1.setCukup();
+            } else{
+                confirmationPaymentPanel1.setKurang();
+            }
+        }
+    }//GEN-LAST:event_button20000ActionPerformed
 
     private void button10000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10000ActionPerformed
         // TODO add your handling code here:
@@ -529,13 +606,12 @@ public class MainPayment extends javax.swing.JFrame {
                 confirmationPaymentPanel1.setKurang();
             }
         }
-
     }//GEN-LAST:event_button10000ActionPerformed
 
-    private void button20000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button20000ActionPerformed
+    private void button5000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5000ActionPerformed
         // TODO add your handling code here:
         if(machine.getCurrentState() == State.PAYMENT_PENDING){
-            machine.processPayment(20_000, "cash");
+            machine.processPayment(5_000, "cash");
             saldoText.setText(machine.getRemainingBalance()+"");
             stateLabel.setText(machine.getCurrentState().name());
             machine.checkBalance();
@@ -546,80 +622,7 @@ public class MainPayment extends javax.swing.JFrame {
                 confirmationPaymentPanel1.setKurang();
             }
         }
-
-    }//GEN-LAST:event_button20000ActionPerformed
-
-    private void button50000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button50000ActionPerformed
-        // TODO add your handling code here:
-        if(machine.getCurrentState() == State.PAYMENT_PENDING){
-            machine.processPayment(50_000, "cash");
-            saldoText.setText(machine.getRemainingBalance()+"");
-            stateLabel.setText(machine.getCurrentState().name());
-            machine.checkBalance();
-            stateLabel.setText(machine.getCurrentState().name());
-            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
-                    confirmationPaymentPanel1.setCukup();
-                } else{
-                    confirmationPaymentPanel1.setKurang();
-                }
-        }
-    }//GEN-LAST:event_button50000ActionPerformed
-
-    private void button100000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button100000ActionPerformed
-        // TODO add your handling code here:
-        if(machine.getCurrentState() == State.PAYMENT_PENDING){
-            machine.processPayment(100_000, "cash");
-            saldoText.setText(machine.getRemainingBalance()+"");
-            stateLabel.setText(machine.getCurrentState().name());
-            machine.checkBalance();
-            stateLabel.setText(machine.getCurrentState().name());
-            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
-                confirmationPaymentPanel1.setCukup();
-            } else{
-                confirmationPaymentPanel1.setKurang();
-            }
-        }
-
-    }//GEN-LAST:event_button100000ActionPerformed
-
-    private void confirmationPaymentPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmationPaymentPanel1MouseClicked
-        // TODO add your handling code here:
-        if(confirmationPaymentPanel1.isAvailable){
-            machine.completeTransaction();
-            stateLabel.setText(machine.getCurrentState().name()); 
-            MainMenuFrame mainMenu = new MainMenuFrame(machine);
-            mainMenu.setVisible(true);
-            this.dispose();            
-        }
-    }//GEN-LAST:event_confirmationPaymentPanel1MouseClicked
-
-    private void QRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QRMouseClicked
-        // TODO add your handling code here:
-        //machine.processPayment(machine.getTotalPayment(), "QRIS");
-        CashPayment.setVisible(false);
-        cd.show(jPanel4, "card3");
-        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
-        minus.setEnabled(false);
-        plus.setEnabled(false);
-        stateLabel.setText(machine.getCurrentState().name());
-        
-        machine.processPayment(machine.getTotalPayment(), "QRIS");
-        stateLabel.setText(machine.getCurrentState().name());
-        confirmationPaymentPanel1.setCukup();
-
-    }//GEN-LAST:event_QRMouseClicked
-
-    private void TunaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TunaiMouseClicked
-        // TODO add your handling code here:
-        cd.show(jPanel4, "card2");
-        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
-        minus.setEnabled(false);
-        plus.setEnabled(false);
-        stateLabel.setText(machine.getCurrentState().name());
-        
-
-        //saldoText.setText(machine);
-    }//GEN-LAST:event_TunaiMouseClicked
+    }//GEN-LAST:event_button5000ActionPerformed
 
     public void updateLabel(){
         //this.stateLabel.setText(machine.getCurrentState().name());
