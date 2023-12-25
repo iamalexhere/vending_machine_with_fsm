@@ -45,17 +45,21 @@ public class Machine {
     }
 
     
-    public void processPayment(int paymentAmount) {
+    public void processPayment(int paymentAmount, String paymentMethod) {
         balance = balance + paymentAmount;
         if (currentState == State.PAYMENT_PENDING) {
-            int totalPrice = selectedProduct.getPrice() * selectedQuantity;
-            totalPayment = totalPrice;
+            if(paymentMethod.equals("cash")){
+                int totalPrice = selectedProduct.getPrice() * selectedQuantity;
+                totalPayment = totalPrice;
 
-            // Update Payment object
-            payment.addPayment(paymentAmount);
-            payment.setTotalPayment(totalPayment);
-
-            currentState = State.BALANCE_CHECK;
+                // Update Payment object
+                payment.addPayment(paymentAmount);
+                payment.setTotalPayment(totalPayment);
+                currentState = State.BALANCE_CHECK;
+            } else if(paymentMethod.equals("QRIS")){
+                //show QR here
+                currentState = State.PAYMENT_COMPLETE;
+            }
         } else {
             cancelTransaction();
         }

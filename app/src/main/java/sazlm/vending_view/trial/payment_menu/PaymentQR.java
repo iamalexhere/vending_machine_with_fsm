@@ -30,21 +30,19 @@ public class PaymentQR extends javax.swing.JPanel {
 
         setOpaque(false);
 
+        qrCode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/qrCodeLipsum_qrcode.png"))); // NOI18N
+        qrCode.setMaximumSize(new java.awt.Dimension(200, 200));
+        qrCode.setMinimumSize(new java.awt.Dimension(200, 200));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(qrCode)
-                .addGap(26, 26, 26))
+            .addComponent(qrCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(qrCode)
-                .addContainerGap(30, Short.MAX_VALUE))
+            .addComponent(qrCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

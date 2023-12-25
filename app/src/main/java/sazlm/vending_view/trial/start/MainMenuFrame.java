@@ -19,6 +19,14 @@ public class MainMenuFrame extends javax.swing.JFrame {
     public MainMenuFrame() {
         initComponents();
         machine = new Machine();
+        updateLabel();
+    }
+    
+    public MainMenuFrame(Machine machine){
+        initComponents();
+        this.machine=machine;
+        updateLabel();
+
     }
 
     /**

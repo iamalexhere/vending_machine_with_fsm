@@ -3,9 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package sazlm.vending_view.trial.selection_menu;
-import sazlm.vending_view.*;
+//import sazlm.vending_view.*;
 import sazlm.vending_model.Machine;
 import sazlm.vending_model.Product;
+import sazlm.vending_view.trial.payment_menu.*;
 
 /**
  *
@@ -123,9 +124,19 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         permenLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/permen.png"))); // NOI18N
         permenLabel.setText("permen");
+        permenLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                permenLabelMouseClicked(evt);
+            }
+        });
 
         maskerLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/masker.png"))); // NOI18N
         maskerLabel.setText("masker");
+        maskerLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                maskerLabelMouseClicked(evt);
+            }
+        });
 
         hargaPermenLabel.setText("10");
 
@@ -141,6 +152,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         obatLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/obat.png"))); // NOI18N
         obatLabel.setText("obat");
+        obatLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                obatLabelMouseClicked(evt);
+            }
+        });
 
         hargaObatLabel.setText("20");
 
@@ -150,6 +166,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         lilinLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/candle.png"))); // NOI18N
         lilinLabel.setText("lilin");
+        lilinLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lilinLabelMouseClicked(evt);
+            }
+        });
 
         hargaLilinLabel.setText("25");
 
@@ -159,6 +180,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         rokokLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/rokok.png"))); // NOI18N
         rokokLabel.setText("rokok");
+        rokokLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rokokLabelMouseClicked(evt);
+            }
+        });
 
         hargaRokokLabel.setText("30");
 
@@ -168,6 +194,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         zippoFluidLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/fluid.png"))); // NOI18N
         zippoFluidLabel.setText("zippo fluid");
+        zippoFluidLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                zippoFluidLabelMouseClicked(evt);
+            }
+        });
 
         hargaZippoFluidLabel.setText("40");
 
@@ -177,6 +208,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         zippoLighterLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/lighter.png"))); // NOI18N
         zippoLighterLabel.setText("zippo lighter");
+        zippoLighterLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                zippoLighterLabelMouseClicked(evt);
+            }
+        });
 
         hargaZippoLighterLabel.setText("70");
 
@@ -186,6 +222,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         travelCableLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/kabel.png"))); // NOI18N
         travelCableLabel.setText("travel cable");
+        travelCableLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                travelCableLabelMouseClicked(evt);
+            }
+        });
 
         hargaTravelCableLabel.setText("85");
 
@@ -195,6 +236,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         flashdiskLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/flashdisk.png"))); // NOI18N
         flashdiskLabel.setText("flashdisk");
+        flashdiskLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flashdiskLabelMouseClicked(evt);
+            }
+        });
 
         hargaFlashdiskLabel.setText("115");
 
@@ -204,6 +250,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         powerbankLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconFolder/uiIcon/powerbank.png"))); // NOI18N
         powerbankLabel.setText("powerbank");
+        powerbankLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                powerbankLabelMouseClicked(evt);
+            }
+        });
 
         hargaPowerbankLabel.setText("180");
 
@@ -329,11 +380,12 @@ public class SelectionProductFrame extends javax.swing.JFrame {
                             .addComponent(hargaObatLabel)))
                     .addComponent(obatLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lilinLabel)
-                    .addComponent(hargaLilinLabel)
-                    .addComponent(stockLilinPlaceholder)
-                    .addComponent(stockLilinLabel))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(hargaLilinLabel)
+                        .addComponent(stockLilinPlaceholder)
+                        .addComponent(stockLilinLabel)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rokokLabel)
@@ -379,6 +431,116 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void permenLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_permenLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.PERMEN)>0){
+            machine.selectProduct("PERMEN");
+            showPaymentView(machine, Product.PERMEN);
+        } else{
+            permenLabel.setEnabled(false);
+        }
+        
+
+    }//GEN-LAST:event_permenLabelMouseClicked
+
+    private void maskerLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_maskerLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.MASKER)>0){
+            machine.selectProduct("MASKER");
+            showPaymentView(machine, Product.MASKER);
+        } else{
+            maskerLabel.setEnabled(false);
+        }
+
+    }//GEN-LAST:event_maskerLabelMouseClicked
+
+    private void obatLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_obatLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.OBAT)>0){
+            machine.selectProduct("OBAT");
+            showPaymentView(machine, Product.OBAT);
+        } else{
+            obatLabel.setEnabled(false);
+        }
+    }//GEN-LAST:event_obatLabelMouseClicked
+
+    private void lilinLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lilinLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.OBAT)>0){
+            machine.selectProduct("LILIN");
+            showPaymentView(machine, Product.LILIN);
+        } else{
+            lilinLabel.setEnabled(false);
+        }
+
+    }//GEN-LAST:event_lilinLabelMouseClicked
+
+    private void rokokLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rokokLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.ROKOK)>0){
+            machine.selectProduct("ROKOK");
+            showPaymentView(machine, Product.ROKOK);
+        } else{
+            rokokLabel.setEnabled(false);
+        }
+    }//GEN-LAST:event_rokokLabelMouseClicked
+
+    private void zippoFluidLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_zippoFluidLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.ZIPPO_FLUID)>0){
+            machine.selectProduct("ZIPPO_FLUID");
+            showPaymentView(machine, Product.ZIPPO_FLUID);
+        } else{
+            zippoFluidLabel.setEnabled(false);
+        }
+    }//GEN-LAST:event_zippoFluidLabelMouseClicked
+
+    private void zippoLighterLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_zippoLighterLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.ZIPPO_LIGHTER)>0){
+            machine.selectProduct("ZIPPO_LIGHTER");
+            showPaymentView(machine, Product.ZIPPO_LIGHTER);
+        } else{
+            zippoLighterLabel.setEnabled(false);
+        }
+    }//GEN-LAST:event_zippoLighterLabelMouseClicked
+
+    private void travelCableLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_travelCableLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.TRAVEL_CABLE)>0){
+            machine.selectProduct("TRAVEL_CABLE");
+            showPaymentView(machine, Product.TRAVEL_CABLE);
+        } else{
+            travelCableLabel.setEnabled(false);
+        }
+    }//GEN-LAST:event_travelCableLabelMouseClicked
+
+    private void flashdiskLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flashdiskLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.FLASHDISK)>0){
+            machine.selectProduct("FLASHDISK");
+            showPaymentView(machine, Product.FLASHDISK);
+        } else{
+            flashdiskLabel.setEnabled(false);
+        }
+    }//GEN-LAST:event_flashdiskLabelMouseClicked
+
+    private void powerbankLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_powerbankLabelMouseClicked
+        // TODO add your handling code here:
+        if(machine.getRemainingStock(Product.POWERBANK)>0){
+            machine.selectProduct("POWERBANK");
+            showPaymentView(machine, Product.POWERBANK);
+        } else{
+            powerbankLabel.setEnabled(false);
+        }
+    }//GEN-LAST:event_powerbankLabelMouseClicked
+
+    public void showPaymentView(Machine machine, Product product){
+        MainPayment mainPayment = new MainPayment(machine, product);
+        mainPayment.setVisible(rootPaneCheckingEnabled);
+        this.dispose();
+    }
 
     /**
      * @param args the command line arguments
@@ -429,10 +591,6 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         this.stockRokokLabel.setText(machine.getRemainingStock(Product.ROKOK)+"");
         this.stockTravelCableLabel.setText(machine.getRemainingStock(Product.TRAVEL_CABLE)+"");
         this.stockPowerbankLabel.setText(machine.getRemainingStock(Product.POWERBANK)+"");
-        
-        
-        
-        //lanjutin
         this.stateLabel.setText(machine.getCurrentState().name());
         
     }

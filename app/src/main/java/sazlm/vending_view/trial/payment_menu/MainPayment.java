@@ -4,17 +4,27 @@
  */
 package sazlm.vending_view.trial.payment_menu;
 
+import sazlm.vending_model.*;
+import sazlm.vending_view.trial.start.*;
+
 /**
  *
  * @author ialex
  */
 public class MainPayment extends javax.swing.JFrame {
-
+    private Machine machine;
+    private Product selectedProduct;
     /**
      * Creates new form MainPayment
      */
     public MainPayment() {
         initComponents();
+    }
+    public MainPayment(Machine machine, Product selectedProduct){
+        initComponents();
+        this.machine = machine;
+        this.selectedProduct = selectedProduct;
+        updateLabel();
     }
 
     /**
@@ -26,44 +36,521 @@ public class MainPayment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        statePanel = new javax.swing.JPanel();
+        statePlaceholder = new javax.swing.JLabel();
+        stateLabel = new javax.swing.JLabel();
         headBorder1 = new sazlm.vending_view.trial.payment_menu.HeadBorder();
-        confirmationProductPanel1 = new sazlm.vending_view.trial.payment_menu.ConfirmationProductPanel();
-        paymentMethod1 = new sazlm.vending_view.trial.payment_menu.PaymentMethod();
-        paymentPanel1 = new sazlm.vending_view.trial.payment_menu.PaymentPanel();
+        confirmationProductPanel = new javax.swing.JPanel();
+        minus = new javax.swing.JLabel();
+        namaProduk = new javax.swing.JLabel();
+        stockProdukPlaceholder = new javax.swing.JLabel();
+        stockProdukLabel = new javax.swing.JLabel();
+        numLabel = new javax.swing.JLabel();
+        hargaProduk = new javax.swing.JLabel();
+        plus = new javax.swing.JLabel();
+        iconProduct = new javax.swing.JLabel();
+        paymentMethodPanel = new javax.swing.JPanel();
+        Tunai = new javax.swing.JLabel();
+        QR = new javax.swing.JLabel();
+        CashPaymentPanel = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        saldoPlaceholder = new javax.swing.JLabel();
+        saldoText = new javax.swing.JLabel();
+        button5000 = new javax.swing.JButton();
+        button10000 = new javax.swing.JButton();
+        button20000 = new javax.swing.JButton();
+        button50000 = new javax.swing.JButton();
+        button100000 = new javax.swing.JButton();
+        confirmationPaymentPanel1 = new sazlm.vending_view.trial.payment_menu.ConfirmationPaymentPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        statePlaceholder.setText("State:");
+
+        stateLabel.setText("STATE");
+
+        javax.swing.GroupLayout statePanelLayout = new javax.swing.GroupLayout(statePanel);
+        statePanel.setLayout(statePanelLayout);
+        statePanelLayout.setHorizontalGroup(
+            statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statePlaceholder)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(stateLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        statePanelLayout.setVerticalGroup(
+            statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(statePlaceholder)
+                    .addComponent(stateLabel))
+                .addContainerGap())
+        );
+
+        minus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        minus.setText("-");
+        minus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                minusMousePressed(evt);
+            }
+        });
+
+        namaProduk.setFont(new java.awt.Font("Square721 BT", 1, 18)); // NOI18N
+        namaProduk.setText("(nama produk)");
+
+        stockProdukPlaceholder.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        stockProdukPlaceholder.setForeground(new java.awt.Color(204, 204, 204));
+        stockProdukPlaceholder.setText("sisa stock:");
+
+        stockProdukLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        stockProdukLabel.setForeground(new java.awt.Color(204, 204, 204));
+        stockProdukLabel.setText("(num)");
+
+        numLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        numLabel.setText("0");
+
+        hargaProduk.setFont(new java.awt.Font("Square721 BT", 0, 16)); // NOI18N
+        hargaProduk.setText("(harga produk)");
+
+        plus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        plus.setText("+");
+        plus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                plusMousePressed(evt);
+            }
+        });
+
+        iconProduct.setFont(new java.awt.Font("Square721 BT", 0, 16)); // NOI18N
+
+        javax.swing.GroupLayout confirmationProductPanelLayout = new javax.swing.GroupLayout(confirmationProductPanel);
+        confirmationProductPanel.setLayout(confirmationProductPanelLayout);
+        confirmationProductPanelLayout.setHorizontalGroup(
+            confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, confirmationProductPanelLayout.createSequentialGroup()
+                .addGroup(confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(confirmationProductPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(namaProduk))
+                    .addGroup(confirmationProductPanelLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(iconProduct)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(hargaProduk)))
+                .addGap(28, 28, 28))
+            .addGroup(confirmationProductPanelLayout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addGroup(confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(confirmationProductPanelLayout.createSequentialGroup()
+                        .addComponent(minus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(numLabel))
+                    .addComponent(stockProdukPlaceholder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(stockProdukLabel)
+                    .addComponent(plus))
+                .addContainerGap(82, Short.MAX_VALUE))
+        );
+        confirmationProductPanelLayout.setVerticalGroup(
+            confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, confirmationProductPanelLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(namaProduk)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hargaProduk)
+                    .addComponent(iconProduct))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addGroup(confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(stockProdukPlaceholder)
+                    .addComponent(stockProdukLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(confirmationProductPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(numLabel)
+                    .addComponent(minus)
+                    .addComponent(plus))
+                .addGap(15, 15, 15))
+        );
+
+        paymentMethodPanel.setOpaque(false);
+
+        Tunai.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        Tunai.setForeground(new java.awt.Color(255, 255, 255));
+        Tunai.setText("Tunai");
+        Tunai.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TunaiMouseClicked(evt);
+            }
+        });
+
+        QR.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        QR.setForeground(new java.awt.Color(175, 175, 175));
+        QR.setText("QR");
+        QR.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                QRMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout paymentMethodPanelLayout = new javax.swing.GroupLayout(paymentMethodPanel);
+        paymentMethodPanel.setLayout(paymentMethodPanelLayout);
+        paymentMethodPanelLayout.setHorizontalGroup(
+            paymentMethodPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paymentMethodPanelLayout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(Tunai)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(QR)
+                .addGap(35, 35, 35))
+        );
+        paymentMethodPanelLayout.setVerticalGroup(
+            paymentMethodPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paymentMethodPanelLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(paymentMethodPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Tunai)
+                    .addComponent(QR))
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
+
+        CashPaymentPanel.setOpaque(false);
+
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel3.setOpaque(false);
+
+        saldoPlaceholder.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        saldoPlaceholder.setForeground(new java.awt.Color(53, 67, 128));
+        saldoPlaceholder.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        saldoPlaceholder.setText("Saldo Belanja Rp.");
+
+        saldoText.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        saldoText.setForeground(new java.awt.Color(53, 67, 128));
+        saldoText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        saldoText.setText(" ");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(saldoPlaceholder, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(saldoText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(saldoPlaceholder)
+                    .addComponent(saldoText))
+                .addGap(75, 75, 75))
+        );
+
+        button5000.setText("5000");
+        button5000.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button5000ActionPerformed(evt);
+            }
+        });
+
+        button10000.setText("10000");
+        button10000.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button10000ActionPerformed(evt);
+            }
+        });
+
+        button20000.setText("20000");
+        button20000.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button20000ActionPerformed(evt);
+            }
+        });
+
+        button50000.setText("50000");
+        button50000.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button50000ActionPerformed(evt);
+            }
+        });
+
+        button100000.setText("100000");
+        button100000.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button100000ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CashPaymentPanelLayout = new javax.swing.GroupLayout(CashPaymentPanel);
+        CashPaymentPanel.setLayout(CashPaymentPanelLayout);
+        CashPaymentPanelLayout.setHorizontalGroup(
+            CashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CashPaymentPanelLayout.createSequentialGroup()
+                .addGroup(CashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(CashPaymentPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(CashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(CashPaymentPanelLayout.createSequentialGroup()
+                                .addComponent(button5000)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(button10000)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(button20000))
+                            .addGroup(CashPaymentPanelLayout.createSequentialGroup()
+                                .addComponent(button50000)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(button100000)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
+        );
+        CashPaymentPanelLayout.setVerticalGroup(
+            CashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CashPaymentPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addGroup(CashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button5000)
+                    .addComponent(button10000)
+                    .addComponent(button20000))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CashPaymentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button50000)
+                    .addComponent(button100000))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        confirmationPaymentPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                confirmationPaymentPanel1MouseClicked(evt);
+            }
+        });
+
+        jLabel1.setText("Pilih Pembayaran");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(statePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(paymentMethodPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(headBorder1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(confirmationProductPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(confirmationProductPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(CashPaymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(paymentPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(paymentMethod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addComponent(confirmationPaymentPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(111, 111, 111))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(headBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confirmationProductPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(confirmationProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(paymentMethod1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel1)
+                .addGap(7, 7, 7)
+                .addComponent(paymentMethodPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(paymentPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 122, Short.MAX_VALUE))
+                .addComponent(CashPaymentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(confirmationPaymentPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addComponent(statePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void minusMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_minusMousePressed
+        // TODO add your handling code here:
+        String numFromLabel = numLabel.getText();
+        int num = Integer.parseInt(numFromLabel);
+        num--;
+        if(num < 1){
+            num =1;
+        }
+        numLabel.setText(num +"");
+        updatePrice();
+    }//GEN-LAST:event_minusMousePressed
+
+    private void plusMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_plusMousePressed
+        // TODO add your handling code here:
+        String numFromLabel = numLabel.getText();
+        int num = Integer.parseInt(numFromLabel);
+        num++;
+        if(num > machine.getRemainingStock(selectedProduct)){
+            num = machine.getRemainingStock(selectedProduct);
+        }
+        numLabel.setText(num +"");
+        updatePrice();
+    }//GEN-LAST:event_plusMousePressed
+
+    private void QRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QRMouseClicked
+        // TODO add your handling code here:
+        CashPaymentPanel.setVisible(false);
+        
+    }//GEN-LAST:event_QRMouseClicked
+
+    private void TunaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TunaiMouseClicked
+        // TODO add your handling code here:
+        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
+        minus.setEnabled(false);
+        plus.setEnabled(false);
+        stateLabel.setText(machine.getCurrentState().name());
+        //saldoText.setText(machine);
+    }//GEN-LAST:event_TunaiMouseClicked
+
+    private void button5000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5000ActionPerformed
+        // TODO add your handling code here:
+        if(machine.getCurrentState() == State.PAYMENT_PENDING){
+            machine.processPayment(5_000, "cash");
+            saldoText.setText(machine.getRemainingBalance()+"");
+            stateLabel.setText(machine.getCurrentState().name());
+            machine.checkBalance();
+            stateLabel.setText(machine.getCurrentState().name());
+            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                confirmationPaymentPanel1.setCukup();
+            } else{
+                confirmationPaymentPanel1.setKurang();
+            }
+        }         
+    }//GEN-LAST:event_button5000ActionPerformed
+
+    private void button10000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button10000ActionPerformed
+        // TODO add your handling code here:
+        if(machine.getCurrentState() == State.PAYMENT_PENDING){
+            machine.processPayment(10_000, "cash");
+            saldoText.setText(machine.getRemainingBalance()+"");
+            stateLabel.setText(machine.getCurrentState().name());
+            machine.checkBalance();
+            stateLabel.setText(machine.getCurrentState().name());
+            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                confirmationPaymentPanel1.setCukup();
+            } else{
+                confirmationPaymentPanel1.setKurang();
+            }
+        }
+
+    }//GEN-LAST:event_button10000ActionPerformed
+
+    private void button20000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button20000ActionPerformed
+        // TODO add your handling code here:
+        if(machine.getCurrentState() == State.PAYMENT_PENDING){
+            machine.processPayment(20_000, "cash");
+            saldoText.setText(machine.getRemainingBalance()+"");
+            stateLabel.setText(machine.getCurrentState().name());
+            machine.checkBalance();
+            stateLabel.setText(machine.getCurrentState().name());
+            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                confirmationPaymentPanel1.setCukup();
+            } else{
+                confirmationPaymentPanel1.setKurang();
+            }
+        }
+
+    }//GEN-LAST:event_button20000ActionPerformed
+
+    private void button50000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button50000ActionPerformed
+        // TODO add your handling code here:
+        if(machine.getCurrentState() == State.PAYMENT_PENDING){
+            machine.processPayment(50_000, "cash");
+            saldoText.setText(machine.getRemainingBalance()+"");
+            stateLabel.setText(machine.getCurrentState().name());
+            machine.checkBalance();
+            stateLabel.setText(machine.getCurrentState().name());
+            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                    confirmationPaymentPanel1.setCukup();
+                } else{
+                    confirmationPaymentPanel1.setKurang();
+                }
+        }
+    }//GEN-LAST:event_button50000ActionPerformed
+
+    private void button100000ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button100000ActionPerformed
+        // TODO add your handling code here:
+        if(machine.getCurrentState() == State.PAYMENT_PENDING){
+            machine.processPayment(100_000, "cash");
+            saldoText.setText(machine.getRemainingBalance()+"");
+            stateLabel.setText(machine.getCurrentState().name());
+            machine.checkBalance();
+            stateLabel.setText(machine.getCurrentState().name());
+            if(machine.getCurrentState() == State.PAYMENT_COMPLETE){
+                confirmationPaymentPanel1.setCukup();
+            } else{
+                confirmationPaymentPanel1.setKurang();
+            }
+        }
+
+    }//GEN-LAST:event_button100000ActionPerformed
+
+    private void confirmationPaymentPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmationPaymentPanel1MouseClicked
+        // TODO add your handling code here:
+        if(confirmationPaymentPanel1.isAvailable){
+            machine.completeTransaction();
+            stateLabel.setText(machine.getCurrentState().name()); 
+            MainMenuFrame mainMenu = new MainMenuFrame(machine);
+            mainMenu.setVisible(true);
+            this.dispose();            
+        }
+    }//GEN-LAST:event_confirmationPaymentPanel1MouseClicked
+
+    public void updateLabel(){
+        //this.stateLabel.setText(machine.getCurrentState().name());
+        this.namaProduk.setText(machine.getSelectedProduct().name());
+        this.hargaProduk.setText(machine.getTotalPayment()+"");
+        this.stockProdukLabel.setText(machine.getRemainingStock(selectedProduct)+"");
+        this.stateLabel.setText(machine.getCurrentState().name());
+        //this.hargaProduk = Product.getProduct()
+    }
+    
+    // Method to update the view of stock
+    public void setStockItem(String stockInfo){
+        stockProdukLabel.setText(stockInfo);
+    }
+    
+    // Method to get updated stock
+    public int getStockItem(){
+        int stock = Integer.parseInt(stockProdukLabel.getText());
+        return stock;
+    }
+    
+    // Method to get Quantity from ui
+    public int getQuantity(javax.swing.JLabel numLabel){
+        String numFromLabel = numLabel.getText();
+        int num = Integer.parseInt(numFromLabel);
+        return num;
+    }
+    
+    public void updatePrice(){
+        //machine.getSelectedQuantity();
+        int quantity = Integer.parseInt(numLabel.getText());
+        int priceTemp = quantity * selectedProduct.getPrice();
+        hargaProduk.setText(priceTemp+"");
+    }
 
     /**
      * @param args the command line arguments
@@ -99,11 +586,35 @@ public class MainPayment extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private sazlm.vending_view.trial.payment_menu.ConfirmationProductPanel confirmationProductPanel1;
+    private javax.swing.JPanel CashPaymentPanel;
+    private javax.swing.JLabel QR;
+    private javax.swing.JLabel Tunai;
+    private javax.swing.JButton button10000;
+    private javax.swing.JButton button100000;
+    private javax.swing.JButton button20000;
+    private javax.swing.JButton button5000;
+    private javax.swing.JButton button50000;
+    private sazlm.vending_view.trial.payment_menu.ConfirmationPaymentPanel confirmationPaymentPanel1;
+    private javax.swing.JPanel confirmationProductPanel;
+    private javax.swing.JLabel hargaProduk;
     private sazlm.vending_view.trial.payment_menu.HeadBorder headBorder1;
-    private sazlm.vending_view.trial.payment_menu.PaymentMethod paymentMethod1;
-    private sazlm.vending_view.trial.payment_menu.PaymentPanel paymentPanel1;
+    private javax.swing.JLabel iconProduct;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel minus;
+    private javax.swing.JLabel namaProduk;
+    private javax.swing.JLabel numLabel;
+    private javax.swing.JPanel paymentMethodPanel;
+    private javax.swing.JLabel plus;
+    private javax.swing.JLabel saldoPlaceholder;
+    private javax.swing.JLabel saldoText;
+    private javax.swing.JLabel stateLabel;
+    private javax.swing.JPanel statePanel;
+    private javax.swing.JLabel statePlaceholder;
+    private javax.swing.JLabel stockProdukLabel;
+    private javax.swing.JLabel stockProdukPlaceholder;
     // End of variables declaration//GEN-END:variables
 }

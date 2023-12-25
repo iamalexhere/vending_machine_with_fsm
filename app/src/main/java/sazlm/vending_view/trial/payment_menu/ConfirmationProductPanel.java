@@ -4,19 +4,28 @@
  */
 package sazlm.vending_view.trial.payment_menu;
 
-import sazlm.vending_view.payment_menu.*;
+import sazlm.vending_model.*;
+
 
 /**
  *
  * @author ialex
  */
 public class ConfirmationProductPanel extends javax.swing.JPanel {
-
+    private Machine machine;
+    private Product selectedProduct;
     /**
      * Creates new form ConfirmationProductPanel
      */
     public ConfirmationProductPanel() {
         initComponents();
+    }
+    
+    public ConfirmationProductPanel(Machine machine, Product selectedProduct) {
+        initComponents();
+        this.machine = machine;
+        this.selectedProduct = selectedProduct;
+        updateLabel();
     }
 
     /**
@@ -158,6 +167,14 @@ public class ConfirmationProductPanel extends javax.swing.JPanel {
         numLabel.setText(num +"");
     }//GEN-LAST:event_plusMousePressed
 
+    public void updateLabel(){
+        //this.stateLabel.setText(machine.getCurrentState().name());
+        this.namaProduk.setText(machine.getSelectedProduct().name());
+        this.hargaProduk.setText(machine.getTotalPayment()+"");
+        this.stockProdukLabel.setText(machine.getRemainingStock(selectedProduct)+"");
+        
+        //this.hargaProduk = Product.getProduct()
+    }
         // Method to update the view of stock
     public void setStockItem(String stockInfo){
         stockProdukLabel.setText(stockInfo);

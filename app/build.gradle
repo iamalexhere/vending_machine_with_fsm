@@ -35,7 +35,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'sazlm.vending_controller.App'
+    mainClass = 'sazlm.vending_controller.AppWIthGUITrial'
 }
 
 run {

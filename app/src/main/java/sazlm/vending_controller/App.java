@@ -4,7 +4,7 @@
 package sazlm.vending_controller;
 
 import sazlm.vending_model.Machine;
-import sazlm.vending_view.TerminalView;
+import sazlm.vending_earlyversionview.TerminalView;
 
 
 public class App {
@@ -30,7 +30,7 @@ public class App {
                     break;
                 case 3:
                     int paymentAmount = view.getPaymentAmountInput();
-                    vendingMachine.processPayment(paymentAmount);
+                    vendingMachine.processPayment(paymentAmount, "cash");
                     break;
                 case 4:
                     vendingMachine.completeTransaction();

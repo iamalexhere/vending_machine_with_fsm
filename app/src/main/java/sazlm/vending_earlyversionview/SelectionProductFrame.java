@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package sazlm.vending_view;
+package sazlm.vending_earlyversionview;
 import sazlm.vending_model.Machine;
 import sazlm.vending_model.Product;
 
@@ -36,6 +36,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
+        jPanel1 = new javax.swing.JPanel();
         statePanel = new javax.swing.JPanel();
         statePlaceholder = new javax.swing.JLabel();
         stateLabel = new javax.swing.JLabel();
@@ -93,6 +94,17 @@ public class SelectionProductFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         statePlaceholder.setText("State:");
@@ -113,7 +125,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         statePanelLayout.setVerticalGroup(
             statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statePanelLayout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(statePlaceholder)
                     .addComponent(stateLabel))
@@ -121,6 +133,11 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         );
 
         permenLabel.setText("permen");
+        permenLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                permenLabelMouseClicked(evt);
+            }
+        });
 
         maskerLabel.setText("masker");
 
@@ -357,12 +374,18 @@ public class SelectionProductFrame extends javax.swing.JFrame {
                         .addComponent(hargaPowerbankLabel)
                         .addComponent(stockPowerbankPlaceholder)
                         .addComponent(stockPowerbankLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addComponent(statePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void permenLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_permenLabelMouseClicked
+        // TODO add your handling code here:
+        machine.selectProduct("PERMEN");
+        showPaymentView(machine, Product.PERMEN);
+    }//GEN-LAST:event_permenLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -404,7 +427,12 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         this.stockPermenLabel.setText(machine.getRemainingStock(Product.PERMEN)+"");
         this.stockMaskerLabel.setText(machine.getRemainingStock(Product.MASKER)+"");
         this.stateLabel.setText(machine.getCurrentState().name());
-        
+    }
+    
+    public void showPaymentView(Machine machine, Product product){
+        PaymentView paymentView = new PaymentView(machine, product);
+        paymentView.setVisible(rootPaneCheckingEnabled);
+        this.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -420,6 +448,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
     private javax.swing.JLabel hargaZippoFluidLabel;
     private javax.swing.JLabel hargaZippoLighterLabel;
     private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lilinLabel;
     private javax.swing.JLabel maskerLabel;
     private javax.swing.JLabel obatLabel;

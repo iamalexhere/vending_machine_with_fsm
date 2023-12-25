@@ -9,16 +9,16 @@ package sazlm.vending_model;
  * @author ialex
  */
 public enum Product {
-    PERMEN(10),
-    MASKER(20),
-    OBAT(20),
-    LILIN(25),
-    ROKOK(30),
-    ZIPPO_FLUID(40),
-    TRAVEL_CABLE(85),
-    FLASHDISK(115),
-    POWERBANK(180),
-    ZIPPO_LIGHTER(70),
+    PERMEN(10_000),
+    MASKER(20_000),
+    OBAT(20_000),
+    LILIN(25_000),
+    ROKOK(30_000),
+    ZIPPO_FLUID(40_000),
+    TRAVEL_CABLE(85_000),
+    FLASHDISK(115_000),
+    POWERBANK(180_000),
+    ZIPPO_LIGHTER(70_000),
     NONE(0);
     
     private int price;

@@ -193,11 +193,13 @@
                   <Component id="obatLabel" min="-2" pref="102" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lilinLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="hargaLilinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockLilinPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="stockLilinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="hargaLilinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockLilinPlaceholder" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="stockLilinLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -300,6 +302,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="permen"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="permenLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="maskerLabel">
       <Properties>
@@ -308,6 +313,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="masker"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="maskerLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaPermenLabel">
       <Properties>
@@ -346,6 +354,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="obat"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="obatLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaObatLabel">
       <Properties>
@@ -369,6 +380,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="lilin"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lilinLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaLilinLabel">
       <Properties>
@@ -392,6 +406,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="rokok"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rokokLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaRokokLabel">
       <Properties>
@@ -415,6 +432,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="zippo fluid"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zippoFluidLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaZippoFluidLabel">
       <Properties>
@@ -438,6 +458,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="zippo lighter"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zippoLighterLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaZippoLighterLabel">
       <Properties>
@@ -461,6 +484,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="travel cable"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="travelCableLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaTravelCableLabel">
       <Properties>
@@ -484,6 +510,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="flashdisk"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="flashdiskLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaFlashdiskLabel">
       <Properties>
@@ -507,6 +536,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="powerbank"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="powerbankLabelMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="hargaPowerbankLabel">
       <Properties>
