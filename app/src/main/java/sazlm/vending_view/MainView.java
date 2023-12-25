@@ -96,6 +96,8 @@ public class MainView extends javax.swing.JFrame {
 
     private void StartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartButtonActionPerformed
         // TODO add your handling code here:
+        //SelectionProductFrame2 selectionProductFrame = new SelectionProductFrame2(machine);
+        //selectionProductFrame.setVisible(true);
         SelectionProductFrame selectionProductFrame = new SelectionProductFrame(machine);
         selectionProductFrame.setVisible(true);
         this.dispose();

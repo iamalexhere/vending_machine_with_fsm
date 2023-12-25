@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package sazlm.vending_view;
+package sazlm.vending_view.trial.selection_menu;
+import sazlm.vending_view.*;
 import sazlm.vending_model.Machine;
 import sazlm.vending_model.Product;
 
@@ -113,7 +114,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         statePanelLayout.setVerticalGroup(
             statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statePanelLayout.createSequentialGroup()
-                .addContainerGap(63, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(statePlaceholder)
                     .addComponent(stateLabel))
@@ -205,7 +206,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(111, 111, 111)
+                .addGap(118, 118, 118)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -289,7 +290,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
                                 .addComponent(stockRokokLabel))
                             .addComponent(stockTravelCableLabel)
                             .addComponent(stockFlashdiskLabel))
-                        .addContainerGap(133, Short.MAX_VALUE))))
+                        .addContainerGap(126, Short.MAX_VALUE))))
             .addComponent(statePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -357,7 +358,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
                         .addComponent(hargaPowerbankLabel)
                         .addComponent(stockPowerbankPlaceholder)
                         .addComponent(stockPowerbankLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addComponent(statePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -391,6 +392,8 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -403,6 +406,8 @@ public class SelectionProductFrame extends javax.swing.JFrame {
     public void updateLabel(){
         this.stockPermenLabel.setText(machine.getRemainingStock(Product.PERMEN)+"");
         this.stockMaskerLabel.setText(machine.getRemainingStock(Product.MASKER)+"");
+        
+        //lanjutin
         this.stateLabel.setText(machine.getCurrentState().name());
         
     }
