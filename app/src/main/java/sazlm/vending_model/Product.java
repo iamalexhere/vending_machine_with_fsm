@@ -15,9 +15,10 @@ public enum Product {
     LILIN(25),
     ROKOK(30),
     ZIPPO_FLUID(40),
-    TRAVEL_CABEL(85),
+    TRAVEL_CABLE(85),
     FLASHDISK(115),
     POWERBANK(180),
+    ZIPPO_LIGHTER(70),
     NONE(0);
     
     private int price;

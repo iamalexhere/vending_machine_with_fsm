@@ -35,6 +35,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         statePanel = new javax.swing.JPanel();
         statePlaceholder = new javax.swing.JLabel();
         stateLabel = new javax.swing.JLabel();
@@ -46,6 +47,51 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         stockPermenPlaceholder = new javax.swing.JLabel();
         stockPermenLabel = new javax.swing.JLabel();
         stockMaskerLabel = new javax.swing.JLabel();
+        obatLabel = new javax.swing.JLabel();
+        hargaObatLabel = new javax.swing.JLabel();
+        stockObatPlaceholder = new javax.swing.JLabel();
+        stockObatLabel = new javax.swing.JLabel();
+        lilinLabel = new javax.swing.JLabel();
+        hargaLilinLabel = new javax.swing.JLabel();
+        stockLilinPlaceholder = new javax.swing.JLabel();
+        stockLilinLabel = new javax.swing.JLabel();
+        rokokLabel = new javax.swing.JLabel();
+        hargaRokokLabel = new javax.swing.JLabel();
+        stockRokokPlaceholder = new javax.swing.JLabel();
+        stockRokokLabel = new javax.swing.JLabel();
+        zippoFluidLabel = new javax.swing.JLabel();
+        hargaZippoFluidLabel = new javax.swing.JLabel();
+        stockZippoFluidPlaceholder = new javax.swing.JLabel();
+        stockZippoFluidLabel = new javax.swing.JLabel();
+        zippoLighterLabel = new javax.swing.JLabel();
+        hargaZippoLighterLabel = new javax.swing.JLabel();
+        stockZippoLighterPlaceholder = new javax.swing.JLabel();
+        stockZippoLighterLabel = new javax.swing.JLabel();
+        travelCableLabel = new javax.swing.JLabel();
+        hargaTravelCableLabel = new javax.swing.JLabel();
+        stockTravelCablePlaceholder = new javax.swing.JLabel();
+        stockTravelCableLabel = new javax.swing.JLabel();
+        flashdiskLabel = new javax.swing.JLabel();
+        hargaFlashdiskLabel = new javax.swing.JLabel();
+        stockFlashdiskPlaceholder = new javax.swing.JLabel();
+        stockFlashdiskLabel = new javax.swing.JLabel();
+        powerbankLabel = new javax.swing.JLabel();
+        hargaPowerbankLabel = new javax.swing.JLabel();
+        stockPowerbankPlaceholder = new javax.swing.JLabel();
+        stockPowerbankLabel = new javax.swing.JLabel();
+
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,12 +108,12 @@ public class SelectionProductFrame extends javax.swing.JFrame {
                 .addComponent(statePlaceholder)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(stateLabel)
-                .addContainerGap(330, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         statePanelLayout.setVerticalGroup(
             statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statePanelLayout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addGroup(statePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(statePlaceholder)
                     .addComponent(stateLabel))
@@ -90,55 +136,228 @@ public class SelectionProductFrame extends javax.swing.JFrame {
 
         stockMaskerLabel.setText("(stock)");
 
+        obatLabel.setText("obat");
+
+        hargaObatLabel.setText("20");
+
+        stockObatPlaceholder.setText("stock:");
+
+        stockObatLabel.setText("(stock)");
+
+        lilinLabel.setText("lilin");
+
+        hargaLilinLabel.setText("25");
+
+        stockLilinPlaceholder.setText("stock:");
+
+        stockLilinLabel.setText("(stock)");
+
+        rokokLabel.setText("rokok");
+
+        hargaRokokLabel.setText("30");
+
+        stockRokokPlaceholder.setText("stock:");
+
+        stockRokokLabel.setText("(stock)");
+
+        zippoFluidLabel.setText("zippo fluid");
+
+        hargaZippoFluidLabel.setText("40");
+
+        stockZippoFluidPlaceholder.setText("stock:");
+
+        stockZippoFluidLabel.setText("(stock)");
+
+        zippoLighterLabel.setText("zippo lighter");
+
+        hargaZippoLighterLabel.setText("70");
+
+        stockZippoLighterPlaceholder.setText("stock:");
+
+        stockZippoLighterLabel.setText("(stock)");
+
+        travelCableLabel.setText("travel cable");
+
+        hargaTravelCableLabel.setText("85");
+
+        stockTravelCablePlaceholder.setText("stock:");
+
+        stockTravelCableLabel.setText("(stock)");
+
+        flashdiskLabel.setText("flashdisk");
+
+        hargaFlashdiskLabel.setText("115");
+
+        stockFlashdiskPlaceholder.setText("stock:");
+
+        stockFlashdiskLabel.setText("(stock)");
+
+        powerbankLabel.setText("powerbank");
+
+        hargaPowerbankLabel.setText("180");
+
+        stockPowerbankPlaceholder.setText("stock:");
+
+        stockPowerbankLabel.setText("(stock)");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(statePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(122, 122, 122)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(permenLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(hargaPermenLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(stockPermenPlaceholder)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(stockPermenLabel))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(maskerLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(hargaMaskerLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lilinLabel)
+                                    .addComponent(rokokLabel))
+                                .addGap(7, 7, 7))
+                            .addComponent(obatLabel, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(31, 31, 31)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(hargaObatLabel)
+                            .addComponent(hargaMaskerLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(hargaLilinLabel)
+                            .addComponent(hargaRokokLabel)
+                            .addComponent(hargaPermenLabel))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(stockRokokPlaceholder)
+                            .addComponent(stockLilinPlaceholder)
                             .addComponent(stockMaskerPlaceholder)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(stockMaskerLabel)))
-                    .addContainerGap(125, Short.MAX_VALUE)))
+                            .addComponent(stockObatPlaceholder)
+                            .addComponent(stockPermenPlaceholder)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(zippoFluidLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(hargaZippoFluidLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(stockZippoFluidPlaceholder))
+                    .addComponent(maskerLabel)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(zippoLighterLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(hargaZippoLighterLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(stockZippoLighterPlaceholder))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(travelCableLabel)
+                            .addComponent(flashdiskLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(hargaTravelCableLabel)
+                                .addGap(18, 18, 18)
+                                .addComponent(stockTravelCablePlaceholder))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(hargaFlashdiskLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(stockFlashdiskPlaceholder))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(powerbankLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(hargaPowerbankLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(stockPowerbankPlaceholder)))
+                .addGap(22, 22, 22)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(stockPowerbankLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(stockZippoLighterLabel)
+                            .addComponent(stockZippoFluidLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(stockMaskerLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(stockPermenLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(stockObatLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(stockLilinLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(stockRokokLabel))
+                            .addComponent(stockTravelCableLabel)
+                            .addComponent(stockFlashdiskLabel))
+                        .addContainerGap(133, Short.MAX_VALUE))))
+            .addComponent(statePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 269, Short.MAX_VALUE)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(permenLabel)
+                    .addComponent(hargaPermenLabel)
+                    .addComponent(stockPermenPlaceholder)
+                    .addComponent(stockPermenLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(stockMaskerPlaceholder)
+                    .addComponent(stockMaskerLabel)
+                    .addComponent(maskerLabel)
+                    .addComponent(hargaMaskerLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(obatLabel)
+                    .addComponent(hargaObatLabel)
+                    .addComponent(stockObatLabel)
+                    .addComponent(stockObatPlaceholder, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lilinLabel)
+                    .addComponent(hargaLilinLabel)
+                    .addComponent(stockLilinPlaceholder)
+                    .addComponent(stockLilinLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rokokLabel)
+                    .addComponent(hargaRokokLabel)
+                    .addComponent(stockRokokPlaceholder)
+                    .addComponent(stockRokokLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(zippoFluidLabel)
+                    .addComponent(hargaZippoFluidLabel)
+                    .addComponent(stockZippoFluidPlaceholder)
+                    .addComponent(stockZippoFluidLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hargaZippoLighterLabel)
+                    .addComponent(zippoLighterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(stockZippoLighterPlaceholder)
+                    .addComponent(stockZippoLighterLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(travelCableLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(hargaTravelCableLabel)
+                    .addComponent(stockTravelCablePlaceholder)
+                    .addComponent(stockTravelCableLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(flashdiskLabel)
+                    .addComponent(hargaFlashdiskLabel)
+                    .addComponent(stockFlashdiskPlaceholder)
+                    .addComponent(stockFlashdiskLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(powerbankLabel)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(hargaPowerbankLabel)
+                        .addComponent(stockPowerbankPlaceholder)
+                        .addComponent(stockPowerbankLabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(statePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(131, 131, 131)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(permenLabel)
-                        .addComponent(hargaPermenLabel)
-                        .addComponent(stockPermenPlaceholder)
-                        .addComponent(stockPermenLabel))
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(maskerLabel)
-                        .addComponent(hargaMaskerLabel)
-                        .addComponent(stockMaskerPlaceholder)
-                        .addComponent(stockMaskerLabel))
-                    .addContainerGap(131, Short.MAX_VALUE)))
         );
 
         pack();
@@ -188,16 +407,49 @@ public class SelectionProductFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel flashdiskLabel;
+    private javax.swing.JLabel hargaFlashdiskLabel;
+    private javax.swing.JLabel hargaLilinLabel;
     private javax.swing.JLabel hargaMaskerLabel;
+    private javax.swing.JLabel hargaObatLabel;
     private javax.swing.JLabel hargaPermenLabel;
+    private javax.swing.JLabel hargaPowerbankLabel;
+    private javax.swing.JLabel hargaRokokLabel;
+    private javax.swing.JLabel hargaTravelCableLabel;
+    private javax.swing.JLabel hargaZippoFluidLabel;
+    private javax.swing.JLabel hargaZippoLighterLabel;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel lilinLabel;
     private javax.swing.JLabel maskerLabel;
+    private javax.swing.JLabel obatLabel;
     private javax.swing.JLabel permenLabel;
+    private javax.swing.JLabel powerbankLabel;
+    private javax.swing.JLabel rokokLabel;
     private javax.swing.JLabel stateLabel;
     private javax.swing.JPanel statePanel;
     private javax.swing.JLabel statePlaceholder;
+    private javax.swing.JLabel stockFlashdiskLabel;
+    private javax.swing.JLabel stockFlashdiskPlaceholder;
+    private javax.swing.JLabel stockLilinLabel;
+    private javax.swing.JLabel stockLilinPlaceholder;
     private javax.swing.JLabel stockMaskerLabel;
     private javax.swing.JLabel stockMaskerPlaceholder;
+    private javax.swing.JLabel stockObatLabel;
+    private javax.swing.JLabel stockObatPlaceholder;
     private javax.swing.JLabel stockPermenLabel;
     private javax.swing.JLabel stockPermenPlaceholder;
+    private javax.swing.JLabel stockPowerbankLabel;
+    private javax.swing.JLabel stockPowerbankPlaceholder;
+    private javax.swing.JLabel stockRokokLabel;
+    private javax.swing.JLabel stockRokokPlaceholder;
+    private javax.swing.JLabel stockTravelCableLabel;
+    private javax.swing.JLabel stockTravelCablePlaceholder;
+    private javax.swing.JLabel stockZippoFluidLabel;
+    private javax.swing.JLabel stockZippoFluidPlaceholder;
+    private javax.swing.JLabel stockZippoLighterLabel;
+    private javax.swing.JLabel stockZippoLighterPlaceholder;
+    private javax.swing.JLabel travelCableLabel;
+    private javax.swing.JLabel zippoFluidLabel;
+    private javax.swing.JLabel zippoLighterLabel;
     // End of variables declaration//GEN-END:variables
 }
