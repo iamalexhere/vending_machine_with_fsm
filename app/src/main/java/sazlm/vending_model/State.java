@@ -3,10 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package sazlm.vending_model;
-
+/*
+ * The State enum represents different states within the vending machine system.
+ * It defines various states such as idle, product selection, payment pending, payment completion, and balance check.
+ */
 /**
  *
  * @author ialex
+ */
+
+/**
+ * Represents different states within the vending machine system.
  */
 public enum State {
     IDLE,
