@@ -7,6 +7,7 @@ this project is a code implementation of a finite state machine, the vending mac
 1. Vending Machine implementation using Finite State Machine
 2. GUI with swing
 3. Vending machine with 2 payment methods, cash and QR
+4. Vending machine cannot return change, extra balance is stays on the machine
 
 ## Technologies Used
 in this project, we used primarily Java 19.0.2 with Gradle 8.4.
