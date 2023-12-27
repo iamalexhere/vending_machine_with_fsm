@@ -6,7 +6,9 @@ package sazlm.vending_controller;
 import sazlm.vending_model.Machine;
 import sazlm.vending_earlyversionview.TerminalView;
 
-
+/*
+this class is primarly use for debug purposes and see the flow of FSM itself
+*/
 public class App {
     public static void main(String[] args) {
         Machine vendingMachine = new Machine();

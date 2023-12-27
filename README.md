@@ -20,7 +20,7 @@ in this project, we used primarily Java 19.0.2 with Gradle 8.4.
   3. Compile the Java Code (also gradle build first!)
   4. Run the Application
 
-If you only interested to run the program without java installed, consider run our .exe file [here](https://shorturl.at/CZ169)
+If you only interested to run the program without java installed, consider run our .exe file [here](https://t.ly/pycmu)
 ## Contributors
 [Imanuel Alexander Here](https://github.com/iamalexhere)
 

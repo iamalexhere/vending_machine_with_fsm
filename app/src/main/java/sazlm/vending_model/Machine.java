@@ -28,7 +28,7 @@ public class Machine {
         inventory = new Inventory();
         selectedProduct = Product.NONE;
         selectedQuantity = 0;
-        payment = new Payment(); // Initialize Payment object
+        payment = new Payment();
     }
     
     /**
@@ -72,7 +72,6 @@ public class Machine {
                 int totalPrice = selectedProduct.getPrice() * selectedQuantity;
                 totalPayment = totalPrice;
 
-                // Update Payment object
                 payment.addPayment(paymentAmount);
                 payment.setTotalPayment(totalPayment);
                 currentState = State.BALANCE_CHECK;
@@ -199,6 +198,7 @@ public class Machine {
     private void displayRemainingStock(Product product) {
         int remainingStock = getRemainingStock(product);
         System.out.println("Remaining stock of " + product + ": " + remainingStock);
+        System.out.println(this.getCurrentState().name());
     }
     
     /**

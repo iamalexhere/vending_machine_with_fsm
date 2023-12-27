@@ -9,6 +9,7 @@ import sazlm.vending_view.trial.start.MainMenuFrame;
  *
  * @author ialex
  */
+//Main class that initialise the GUI view
 public class AppWIthGUITrial {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

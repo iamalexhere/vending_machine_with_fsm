@@ -137,8 +137,9 @@ public class MainPayment extends javax.swing.JFrame {
         paymentMethodPanel.setBackground(new java.awt.Color(43, 60, 90));
 
         Tunai.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        Tunai.setForeground(new java.awt.Color(255, 255, 255));
+        Tunai.setForeground(new java.awt.Color(175, 175, 175));
         Tunai.setText("Tunai");
+        Tunai.setEnabled(false);
         Tunai.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 TunaiMouseClicked(evt);
@@ -148,6 +149,7 @@ public class MainPayment extends javax.swing.JFrame {
         QR.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         QR.setForeground(new java.awt.Color(175, 175, 175));
         QR.setText("QR");
+        QR.setEnabled(false);
         QR.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 QRMouseClicked(evt);
@@ -277,16 +279,15 @@ public class MainPayment extends javax.swing.JFrame {
         qrPaymentLayout.setHorizontalGroup(
             qrPaymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(qrPaymentLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel2)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
         qrPaymentLayout.setVerticalGroup(
             qrPaymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(qrPaymentLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
                 .addComponent(jLabel2)
-                .addGap(15, 15, 15))
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         jPanel4.add(qrPayment, "card3");
@@ -328,6 +329,7 @@ public class MainPayment extends javax.swing.JFrame {
         );
 
         button5000.setText("5000");
+        button5000.setEnabled(false);
         button5000.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button5000ActionPerformed(evt);
@@ -335,6 +337,7 @@ public class MainPayment extends javax.swing.JFrame {
         });
 
         button10000.setText("10000");
+        button10000.setEnabled(false);
         button10000.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button10000ActionPerformed(evt);
@@ -342,6 +345,7 @@ public class MainPayment extends javax.swing.JFrame {
         });
 
         button20000.setText("20000");
+        button20000.setEnabled(false);
         button20000.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button20000ActionPerformed(evt);
@@ -349,6 +353,7 @@ public class MainPayment extends javax.swing.JFrame {
         });
 
         button50000.setText("50000");
+        button50000.setEnabled(false);
         button50000.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button50000ActionPerformed(evt);
@@ -356,6 +361,7 @@ public class MainPayment extends javax.swing.JFrame {
         });
 
         button100000.setText("100000");
+        button100000.setEnabled(false);
         button100000.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 button100000ActionPerformed(evt);
@@ -468,7 +474,8 @@ public class MainPayment extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(headBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -484,6 +491,8 @@ public class MainPayment extends javax.swing.JFrame {
         }
         numLabel.setText(num +"");
         updatePrice();
+        Tunai.setEnabled(true);
+        QR.setEnabled(true);
     }//GEN-LAST:event_minusMousePressed
 
     private void plusMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_plusMousePressed
@@ -496,6 +505,8 @@ public class MainPayment extends javax.swing.JFrame {
         }
         numLabel.setText(num +"");
         updatePrice();
+        Tunai.setEnabled(true);
+        QR.setEnabled(true);
     }//GEN-LAST:event_plusMousePressed
 
     private void confirmationPaymentPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_confirmationPaymentPanel1MouseClicked
@@ -511,34 +522,55 @@ public class MainPayment extends javax.swing.JFrame {
 
     private void QRMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QRMouseClicked
         // TODO add your handling code here:
-        //machine.processPayment(machine.getTotalPayment(), "QRIS");
-        CashPayment.setVisible(false);
-        cd.show(jPanel4, "card3");
-        QR.setForeground(Color.white);
-        Tunai.setForeground(Color.LIGHT_GRAY);
-        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
-        minus.setEnabled(false);
-        plus.setEnabled(false);
-        stateLabel.setText(machine.getCurrentState().name());
-        
-        machine.processPayment(machine.getTotalPayment(), "QRIS");
-        stateLabel.setText(machine.getCurrentState().name());
-        confirmationPaymentPanel1.setCukup();
+        String numFromLabel = numLabel.getText();
+        int num = Integer.parseInt(numFromLabel);
+        if(num==0){
+            QR.setEnabled(false);
+        }else{
+           CashPayment.setVisible(false);
+            cd.show(jPanel4, "card3");
+            QR.setForeground(Color.white);
+            Tunai.setForeground(Color.LIGHT_GRAY);
+            //Tunai.setEnabled(false);
+            Tunai.setVisible(false);
+            machine.selectQuantity(Integer.parseInt(numLabel.getText()));
+            minus.setEnabled(false);
+            plus.setEnabled(false);
+            stateLabel.setText(machine.getCurrentState().name());
+
+            machine.processPayment(machine.getTotalPayment(), "QRIS");
+            stateLabel.setText(machine.getCurrentState().name());
+            confirmationPaymentPanel1.setCukup(); 
+        }
 
     }//GEN-LAST:event_QRMouseClicked
 
     private void TunaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TunaiMouseClicked
         // TODO add your handling code here:
-        cd.show(jPanel4, "card2");
-        Tunai.setForeground(Color.white);
-        QR.setForeground(Color.LIGHT_GRAY);
-        machine.selectQuantity(Integer.parseInt(numLabel.getText()));
-        minus.setEnabled(false);
-        plus.setEnabled(false);
-        stateLabel.setText(machine.getCurrentState().name());
-        
-        
-
+        String numFromLabel = numLabel.getText();
+        int num = Integer.parseInt(numFromLabel);
+        if(num==0){
+            Tunai.setEnabled(false);
+        }else{
+            cd.show(jPanel4, "card2");
+            Tunai.setForeground(Color.white);
+            QR.setForeground(Color.LIGHT_GRAY);
+            //QR.setEnabled(false);
+            QR.setVisible(false);
+            machine.selectQuantity(Integer.parseInt(numLabel.getText()));
+            minus.setEnabled(false);
+            plus.setEnabled(false);
+            stateLabel.setText(machine.getCurrentState().name());
+            this.button100000.setEnabled(true);
+            this.button50000.setEnabled(true);
+            this.button20000.setEnabled(true);
+            this.button10000.setEnabled(true);
+            this.button5000.setEnabled(true);
+            
+            if(machine.getRemainingBalance() >= machine.getTotalPayment()){
+                confirmationPaymentPanel1.setCukup();
+            }
+        }
         //saldoText.setText(machine);
     }//GEN-LAST:event_TunaiMouseClicked
 
@@ -627,9 +659,10 @@ public class MainPayment extends javax.swing.JFrame {
     public void updateLabel(){
         //this.stateLabel.setText(machine.getCurrentState().name());
         this.namaProduk.setText(machine.getSelectedProduct().name());
-        this.hargaProduk.setText(machine.getTotalPayment()+"");
+        this.hargaProduk.setText("0");
         this.stockProdukLabel.setText(machine.getRemainingStock(selectedProduct)+"");
         this.stateLabel.setText(machine.getCurrentState().name());
+        this.saldoText.setText(machine.getRemainingBalance()+"");
         //this.hargaProduk = Product.getProduct()
     }
     

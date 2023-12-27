@@ -32,6 +32,7 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         this.machine = machine;
         updateLabel();
         goToMainMenu();
+        updateProductLabel();
     }
 
 
@@ -639,8 +640,40 @@ public class SelectionProductFrame extends javax.swing.JFrame {
         this.stockRokokLabel.setText(machine.getRemainingStock(Product.ROKOK)+"");
         this.stockTravelCableLabel.setText(machine.getRemainingStock(Product.TRAVEL_CABLE)+"");
         this.stockPowerbankLabel.setText(machine.getRemainingStock(Product.POWERBANK)+"");
-        this.stateLabel.setText(machine.getCurrentState().name());
-        
+        this.stateLabel.setText(machine.getCurrentState().name()); 
+    }
+    
+    public void updateProductLabel(){
+        if(machine.getRemainingStock(Product.PERMEN) <=0){
+            this.permenLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.MASKER) <=0){
+            this.maskerLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.OBAT) <=0){
+            this.obatLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.LILIN) <=0){
+            this.lilinLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.FLASHDISK) <=0){
+            this.flashdiskLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.ZIPPO_FLUID) <=0){
+            this.zippoFluidLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.ZIPPO_LIGHTER) <=0){
+            this.zippoLighterLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.ROKOK) <=0){
+            this.rokokLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.TRAVEL_CABLE) <=0){
+            this.travelCableLabel.setEnabled(false);
+        }
+        if(machine.getRemainingStock(Product.POWERBANK) <=0){
+            this.powerbankLabel.setEnabled(false);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
