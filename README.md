@@ -1,4 +1,7 @@
 # Vending Machine Modeling with Finite State Machine
+<img src="https://i.imgur.com/JPgU408.jpg" alt="Poster" width="50%">
+this poster is submited to DisCoTics 2023
+
 ## Description
 this project is a code implementation of a finite state machine, the vending machine. in this simple project we use the Model View Controller (MVC) Architectural Pattern as a basic reference in making code. it was developed as part of coding assignment in discrete structure class. this project is also made so that students can better understand the finite state machine material. 
 ![Vending Machine FSM Diagraph](https://i.imgur.com/wdtLip4.jpeg)
